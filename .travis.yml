@@ -2,11 +2,14 @@ language: node_js
 cache: yarn
 node_js:
 - '8'
+install:
+  - yarn
 script:
 - npm test && npm run coverage
 deploy:
   provider: npm
   email: emmakyeyune@gmail.com
+  skip_cleanup: true
   api_key:
     secure: PWZdxXgXDscR+gIxeEH7Hb6asp20fw39xYh/iJr0Z1gAJdFeKKUxVNrUJf0DWh59qgTNqXOXWs6Bu2RRuhjHaYKvoz+grT9crD0FZghKp/kmHZvMaPYO/WjmJ8fHIIQd2fb7jjShce0j7KBeemZA2hpvWXLx/xA/D+PHMd531C0BDU3cMvvUuAnBubSr6Wv03+jbQc367QRkfcgriSEGvL7Yl6yUubebEVkQAWS24oT6wPToBbWg6hKyjebc+qA67jZ2Y8PvEU62aEmHkbSCx4XtszpC3K1Vlyvk/mUny5SDq/i934/JFbSF8inTHNZvxb0GuW5rgYHI8b6GfnAiMDVI3d/Qx78fgv5EHX5Ae+yV0oDsUFyLryAaQpgcP3/k7N6PF/wcuRBdjDZ4r9VZjjSRQlAjRMt3XomsqupiDTyqvv9Ayt0oMfirHc5LOBYD4x/Bjkt06oZiS1VFUM7RC7cnbxOtI+wxMnN6XAkP/lteZ2OjDVJnQerMjATesTk02CI3hEzHwAJpvYqhYu06VnYiDtBwpCQlezNqSbiftAj7eIFmDi/i82z2YjphGQnAgzhEPDIGTD+A8GXqY4Z0fvYb8A9qTKDxZ9PC1EUL0FttWUoSnIcTsMh4W+Zn+1+pIxFCgDXn5hPcXuqwMZHyU5EQ32ukkD283sL/X3SqWbw=
   on:
